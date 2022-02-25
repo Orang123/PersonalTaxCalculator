@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/currentMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已工作月数"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/beforeTaxSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本月税前工资"
+                android:textSize="15sp"
+                android:layout_marginRight="70dp"/>
+
+            <TextView
+                android:id="@+id/totalBeforeTaxSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计税前工资"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/insure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="五险一金"
+                android:textSize="15sp"
+                android:layout_marginRight="70dp"/>
+
+            <TextView
+                android:id="@+id/totalInsure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计五险一金"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/specifieDeduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="专项附加扣除"
+                android:textSize="15sp"
+                android:layout_marginRight="70dp"/>
+
+            <TextView
+                android:id="@+id/totalSpecifieDeduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计专项附加扣除"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/startLevyPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起征点5000"
+                android:textSize="15sp"
+                android:layout_marginRight="70dp"/>
+
+            <TextView
+                android:id="@+id/totalStartLevyPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计减除费用起征点=减除费用X月数="
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="上月累计收入=累计收入-本月税前工资"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lastMonthTotalIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="上月累计五险一金=累计五险一金-五险一金"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lastMonthTotalInsure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="上月累计专项附加扣除=累计专项附加扣除-专项附加扣除"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lastMonthTotalDeduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="上月累计减除费用(起征点)=累计减除费用-减除费用"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lastMonthTotalStartPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="应纳税所得额=累计收入-累计五险一金(个人缴纳部分)-累计专项附加扣除-累计减除费用"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/getTaxMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="上月应纳税所得额=上月累计收入-上月累计五险一金(个人缴纳部分)-上月累计专项附加扣除-上月累计减除费用"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lastGetTaxMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/taxratesheet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="累计应纳税额=应纳税所得额x预扣税率-速算扣除数"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/totalTaxMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="累计已缴纳税额=上月应纳税所得额x预扣税率-速算扣除数"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/totalAlreadyTaxMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="当月应纳税额=累计应纳税额-累计已缴纳税额"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/currentPersonalTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="本月税后工资=本月税前工资－五险一金－当月应纳个税"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/afterTaxSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:onClick="goBack"/>
+
+    </LinearLayout>
+
+</ScrollView>
